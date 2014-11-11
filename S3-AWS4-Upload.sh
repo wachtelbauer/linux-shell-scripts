@@ -9,7 +9,7 @@
 ###########################################################################################################
 # When I moved my Amazon VPC to Frankfurt, I did so with my S3 bucket that holds my daily backups.
 # It was painful to find out, that my upload skripts (using CURL) did not work anymore with this new bucket
-# The V4 signing process seemd not to be strait foreward.
+# The V4 signing process seemed not to be strait foreward.
 # A sample that I found on https://github.com/emmanuel/aws-bash/blob/master/sign-aws.sh
 # did not work for me out of the box.
 # I stole from there, what could help me and made my own script. It cost me a lot of head scratching,
@@ -17,9 +17,9 @@
 # After all, signing an S3 upload with V4 is not that complicated.
 ###########################################################################################################
 # To make this code work, you need:
-# An S3 bucket. Change the value of BUCKET below 
+# An S3 bucket. Change the values of BUCKET and REQUEST_REGION below 
 # A file /home/ubuntu/aws/security/AWS_SECRET_KEY that contains the AWS_SECRET_KEY 
-# A file /home/ubuntu/aws/security/AWS_ACCESS_KEYY that contains the AWS_ACCESS_KEY
+# A file /home/ubuntu/aws/security/AWS_ACCESS_KEY that contains the AWS_ACCESS_KEY
 # A file /home/ubuntu/Zauberlehrling.txt. This is the file to be uploaded.
 # The file will be uploaded to a folder named "Schiller". This folder will be created, if it does not exist.
 # According to the value of EXPIRE this code will work until 2015-01-01
